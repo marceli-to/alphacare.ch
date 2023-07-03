@@ -1,7 +1,7 @@
 (function () {
 
   const selectors = {
-    btn: '[data-menu-btn]',
+    btn: '[data-btn-menu]',
     menu: '[data-menu]'
   };
 
@@ -12,7 +12,8 @@
 
   const toggle = () => {
     const menu = document.querySelector(selectors.menu);
-    menu.classList.toggle('is-visible');
+    menu.classList.toggle('is-open');
+    
     const btn = document.querySelector(selectors.btn);
     btn.classList.toggle('is-active');
   };

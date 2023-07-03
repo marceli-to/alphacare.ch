@@ -1,0 +1,4 @@
+
+header.site-header > div {
+  @apply container flex items-center justify-between min-h-[112px] lg:min-h-[128px];
+}

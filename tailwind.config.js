@@ -12,63 +12,33 @@ module.exports = {
 
     extend: {
 
-      gridTemplateColumns: {
-        '15': 'repeat(15, minmax(0, 1fr))',
-      },
-
-      borderWidth: {
-        '12': '12px',
-        '16': '16px',
-        '18': '18px',
-        '20': '20px',
-      },
-
       colors: {
-        'midnight': '#374974',
-        'misty-blue': '#9ba4bb',
-        'cloud-mist': '#eaecf1',
-        'rosewater': '#ffefef',
-
-        // argmuments
-        'sunburst': '#F5AB2B',
-        'ink-blue': '#0E3346',
-        'aqua': '#619FA6',
-        'fiesta-red': '#F16064',
-        'mocha': '#AEA69D',
-        'mossy-green': '#608274',
-        'serene-sea': '#687598'
-      },
-
-      screens: {
-        '2xl': '1440px',
-        '3xl': '1600px',
-        '4xl': '1980px',
+        'azure': '#99d0e0',
+        'graphite': '#706f6f',
       },
 
       fontFamily: {
-        'light': ['davis-sans', ...defaultTheme.fontFamily.sans],
-        'bold': ['davis-sans', ...defaultTheme.fontFamily.sans],
+        'regular': ['Maven Pro', ...defaultTheme.fontFamily.sans],
+        'semi': ['Maven Pro', ...defaultTheme.fontFamily.sans],
+        'black': ['Maven Pro', ...defaultTheme.fontFamily.sans],
       },
 
       fontSize: {
+        '4xl': '6rem', // 96px
+        '3xl': '4rem', // 64px
+        '2xl': '2.25rem', // 36px
+        'xl': '1.5rem', // 24px,
+        'lg': '1.25rem', // 20px
+        'md': '1.1875rem', // 19px
+        'base': '1.125rem', // 18px
+        'sm': '1rem', // 16px
+        'xs': '0.9375rem', // 15px
+        'tiny': '0.75rem', // 12px
+      },
 
-        'xxs': '1rem',      // 16px
-        'xs': '1.125rem',   // 18px
-        'sm': '1.375rem',   // 22px
-
-        'base': '1.1875rem',  // 18px/1.125 => 19px/1.1875
-        'md': '1.3125rem',   // 22px/1.375 => 21px/1.3125
-        'lg': '1.5rem',      // 26px/1.625 => 24px/1.5
-
-        'xl': '1.3rem',      // 22px/1.375 => 20px/1.3
-        '2xl': '1.5rem',     // 26px/1.625 => 24px/1.5
-        '3xl': '1.75rem',    // 32px/2 => 28px/1.75
-
-        '4xl': '1.875rem',   // 33px/2.063 => 28px/1.75 => 30px/1.875
-        '5xl': '2rem',      // 36px/2.25 => 32px/2
-        '6xl': '2.25rem',    // 44px/2.75 => 36px/2.25
-        '7xl': '2.75rem',    // 55px/3.438 => 44px/2.75
-        '8xl': '3.5rem',     // 66px/4.125 => 56px/3.5
+      screens: {
+        'lg': '960px',
+        '2xl': '1404px',
       },
     },
 

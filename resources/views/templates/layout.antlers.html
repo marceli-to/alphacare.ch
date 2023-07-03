@@ -2,19 +2,19 @@
 <html lang="{{ site:short_locale }}">
 <head>
 <meta charset="utf-8">
-<title>{{ title ?? site:name }} &bull; Kampagne «Ja zur alphacare anästhesie»</title>
+<title>{{ title ?? site:name }} &bull; alphacare anästhesie</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-{{ if  open_graph_description }}<meta name="description" content="{{ open_graph_description }}">{{ else }}<meta name="description" content="Erfahren Sie, wie durch alphacare anästhesieen mehr Sicherheit, Pünktlichkeit und Nachtruhe gewährleistet werden, ohne die Kapazität zu beeinträchtigen oder auf Steuergelder zurückzugreifen. Besuchen Sie uns bald wieder, um weitere Informationen zu erhalten.">{{ /if}}
-<meta property="og:title" content="{{ title ?? site:name }} &bull; Kampagne «Ja zur alphacare anästhesie»">
-{{ if  open_graph_description }}<meta name="og:description" content="{{ open_graph_description }}">{{ else }}<meta property="og:description" content="Erfahren Sie, wie durch alphacare anästhesieen mehr Sicherheit, Pünktlichkeit und Nachtruhe gewährleistet werden, ohne die Kapazität zu beeinträchtigen oder auf Steuergelder zurückzugreifen. Besuchen Sie uns bald wieder, um weitere Informationen zu erhalten.">{{ /if }}
-{{ if open_graph_image }}<meta property="og:image" content="{{ config:client:base_url }}{{ open_graph_image }}"> {{ else }}<meta property="og:image" content="{{ config:client:base_url }}/assets/ja_zur_alphacare_16_9.png">{{ /if }}
+{{ if  open_graph_description }}<meta name="description" content="{{ open_graph_description }}">{{ else }}<meta name="description" content="">{{ /if}}
+<meta property="og:title" content="{{ title ?? site:name }} &bull; alphacare anästhesie">
+{{ if  open_graph_description }}<meta name="og:description" content="{{ open_graph_description }}">{{ else }}<meta property="og:description" content="">{{ /if }}
+{{ if open_graph_image }}<meta property="og:image" content="{{ config:client:base_url }}{{ open_graph_image }}"> {{ else }}<meta property="og:image" content="{{ config:client:base_url }}/assets/alphacare-opengraph.png">{{ /if }}
 <meta property="og:url" content="{{ site_url }}{{ current_url }}">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
-{{ if  open_graph_description }}<meta name="twitter:description" content="{{ open_graph_description }}">{{ else }}<meta name="twitter:description" content="Erfahren Sie, wie durch alphacare anästhesieen mehr Sicherheit, Pünktlichkeit und Nachtruhe gewährleistet werden, ohne die Kapazität zu beeinträchtigen oder auf Steuergelder zurückzugreifen. Besuchen Sie uns bald wieder, um weitere Informationen zu erhalten.">{{ /if }}
-<meta name="twitter:title" content="{{ title ?? site:name }} &bull; Kampagne «Ja zur alphacare anästhesie»">
-{{ if open_graph_image }}<meta property="twitter:image" content="{{ config:client:base_url }}{{ open_graph_image }}"> {{ else }}<meta property="twitter:image" content="{{ config:client:base_url }}/assets/ja_zur_alphacare_16_9.png">{{ /if }}
+{{ if  open_graph_description }}<meta name="twitter:description" content="{{ open_graph_description }}">{{ else }}<meta name="twitter:description" content="">{{ /if }}
+<meta name="twitter:title" content="{{ title ?? site:name }} &bull; alphacare anästhesie">
+{{ if open_graph_image }}<meta property="twitter:image" content="{{ config:client:base_url }}{{ open_graph_image }}"> {{ else }}<meta property="twitter:image" content="{{ config:client:base_url }}/assets/alphacare-opengraph.png">{{ /if }}
 <meta name="csrf-token" content="{{ csrf_token }}">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -24,22 +24,24 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 {{ vite src="resources/js/app.js" }}
-<script>
-  var _paq = window._paq = window._paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u='https://fhanalytics.ch/';
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '8']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
-  </script>
 </head>
-<body class="font-light leading-tight text-midnight text-xl md:text-2xl xl:text-3xl">
-  {{ partial:layout/header }}
+<body class="font-regular text-graphite">
+  <header class="site-header">
+    <div>
+      <a href="/" title="Homepage anzeigen" class="block w-[94px] lg:w-[136px] h-auto">
+        {{ partial:icons/logo }}
+      </a>
+      <a href="javascript:;" class="btn-menu" data-btn-menu title="Menu anzeigen / verbergen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+      {{ partial:menu/main }}
+    </div>
+
+  </header>
+  {{# {{ partial:layout/header }}
   {{ template_content }}
-  {{ partial:layout/footer }}
+  {{ partial:layout/footer }} #}}
 </body>
 </html>

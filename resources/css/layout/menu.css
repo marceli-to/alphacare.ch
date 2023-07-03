@@ -1,0 +1,32 @@
+nav.site-menu {
+  @apply bg-red-200 fixed w-full z-50 px-27 pt-27 top-[112px] left-0;
+  height: 1px;
+  opacity: 0;
+  transition: height .36s ease-in-out;
+}
+
+nav.site-menu.is-open {
+  height: calc(100vh - 112px);
+  opacity: 1;
+}
+
+nav.site-menu.is-open ul {
+  @apply opacity-100
+}
+
+nav.site-menu ul {
+  @apply opacity-0 transition-opacity duration-200 delay-200 ease-in-out;
+
+}
+
+nav.site-menu ul ul {
+  @apply ml-8 mb-5
+}
+
+nav.site-menu ul a {
+  @apply text-base font-semibold text-graphite py-4 block;
+}
+
+nav.site-menu ul ul a {
+  @apply text-base font-regular font-normal text-graphite;
+}
