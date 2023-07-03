@@ -1,0 +1,12 @@
+<a href="{{ website }}" target="_blank" rel="noopener" title="{{ organisation }}" class="block mb-30 md:mb-0 md:col-span-3 xl:col-span-3">
+  <img 
+    src="{{ glide :src="image:url" :width="'400'" :height="'200'" }}" 
+    class="max-w-sm md:max-w-none w-full h-auto block" 
+    width="400" 
+    height="200" 
+    alt="{{ organisation }}"
+    {{ if !first }}
+      loading="lazy"
+    {{ /if }}
+    >
+</a>

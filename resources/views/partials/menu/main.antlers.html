@@ -1,0 +1,17 @@
+<a 
+  href="javascript:;" 
+  title="Menu anzeigen / verbergen"
+  class=""
+  data-menu-btn>
+  {{ partial:icons/cross :class="'icon-cross'" }}
+  {{ partial:icons/burger :class="'icon-burger'" }}
+</a>
+<div class="menu" data-menu>
+  <nav class="container">
+    <ul class="">
+      {{ nav:collection:pages sort="order" is_menu:is="1" }}
+        {{ partial:menu/item :text="title" :url="url" target="_self" }}
+      {{ /nav:collection:pages }}
+    </ul>
+  </nav>
+</div>

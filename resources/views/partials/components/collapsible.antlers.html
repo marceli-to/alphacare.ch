@@ -1,0 +1,10 @@
+<details class="border-t last-of-type:border-b border-cloud-mist py-10 md:py-20 {{ class }}">
+  <summary class="flex items-start leading-none justify-start cursor-pointer">
+    {{ partial:icons/plus :class="'plus block w-15 h-15 md:w-20 md:h-20 shrink-0 mt-7'" }}
+    {{ partial:icons/minus :class="'minus hidden w-15 h-15 md:w-20 md:h-20 shrink-0 mt-7'" }}
+    <h3 class="select-none text-left font-bold leading-tight ml-15 md:ml-25">{{ title }}</h3>
+  </summary>
+  <div class="py-10 pl-30 md:pl-45 {{ innerClass }}">
+    {{ text }}
+  </div>
+</details>

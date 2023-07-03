@@ -1,0 +1,51 @@
+{{ if isSingle }}
+
+<a href="/komitee" title="Weitere Unterstützer">
+  <figure class="mb-20 md:mb-30 max-w-[185px] md:max-w-[275px] mx-auto">
+    <img 
+      src="{{ glide :src="image:url" :width="'640'" :height="'640'" }}" 
+      class="block w-full rounded-full" 
+      width="1000" 
+      height="1000" 
+      alt="{{ alt }}"
+      {{ if !first }}
+        loading="lazy"
+      {{ /if }}
+      >
+  </figure>
+  <div class="px-20 md:px-0 text-white text-center max-w-xl mx-auto">
+    {{ if quote }}
+      &laquo;{{ quote}}&raquo;
+    {{ /if }}
+    <div class="font-bold text-base md:text-md xl:text-lg mt-20 xl:mt-30">
+      {{ firstname }} {{ name }}{{ if function }}, {{function}} {{ /if }}<br>
+      {{ location }}
+    </div>
+  </div>
+</a>
+
+{{ else }}
+  <div class="md:grid md:grid-cols-12 items-center {{ if !last }} mb-45 md:mb-45 xl:mb-70 {{ /if }}">
+    <figure class="md:col-span-4 xl:col-span-3 mb-30 md:mb-0 max-w-[185px] md:max-w-[275px] mx-auto">
+      <img 
+        src="{{ glide :src="image:url" :width="'640'" :height="'640'" }}" 
+        class="block w-full rounded-full" 
+        width="1000" 
+        height="1000" 
+        alt="{{ alt }}"
+        {{ if !first }}
+          loading="lazy"
+        {{ /if }}
+        >
+    </figure>
+    <div class="md:col-span-8 xl:col-span-9 text-white text-center md:text-left max-w-xl md:max-w-none mx-auto md:ml-25 xl:ml-65">
+      {{ if quote }}
+        &laquo;{{ quote}}&raquo;
+      {{ /if }}
+      <div class="font-bold text-base md:text-md xl:text-lg mt-20 xl:mt-30">
+        {{ firstname }} {{ name }}{{ if function }}, {{function}} {{ /if }}<br>
+        {{ location }}
+      </div>
+    </div>
+  </div>
+{{ /if }}

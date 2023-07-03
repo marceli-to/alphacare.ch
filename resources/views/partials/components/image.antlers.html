@@ -1,0 +1,9 @@
+{{ if isPreview }}
+  <figure class="mb-10 md:mb-12 xl:mb-21">
+    <img src="{{ preview_image.url }}" alt="{{ preview_image.alt }}" width="{{ preview_image.width }}" height="{{ preview_image.height }}" class="block w-full h-auto group-hover:opacity-80 transition-opacity" />
+  </figure>
+{{ else }}
+  <figure class="mb-20 md:mb-24 xl:mb-42">
+    <img src="{{ image.url }}" alt="{{ image.alt }}" width="{{ image.width }}" height="{{ image.height }}" class="block w-full h-auto" />
+  </figure>
+{{ /if }}

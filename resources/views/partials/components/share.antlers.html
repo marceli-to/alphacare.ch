@@ -1,0 +1,17 @@
+<div class="flex justify-center w-full mt-45 lg:mt-60">
+  <div class="flex items-center justify-start">
+    <div class="font-bold text-base md:text-md xl:text-lg">Share this on</div>
+    <ul class="flex !mb-0 !ml-16">
+      <li class="!block mr-12">
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ site_url }}{{ current_url }}" target="_blank" class="hover:text-misty-blue {{ hoverClass }} transition-colors" title="Seite auf Facebook teilen">
+          {{ partial:icons/facebook :class="'h-23 xl:h-27'" }}
+        </a>
+      </li>
+      <li class="!block">
+        <a href="https://twitter.com/intent/tweet?url={{ site_url }}{{ current_url }}" target="_blank" class="hover:text-misty-blue {{ hoverClass }} transition-colors" title="Seite auf Twitter teilen">
+          {{ partial:icons/twitter :class="'h-22 xl:h-25'" }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
