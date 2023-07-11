@@ -45,6 +45,10 @@ nav.site-menu ul a.is-active {
   @apply text-azure;
 }
 
+nav.site-menu ul a.is-current {
+  @apply text-azure;
+}
+
 nav.site-menu ul ul a {
   @apply text-base font-regular font-normal text-graphite;
 }

@@ -34,6 +34,14 @@
     
     const btn = document.querySelector(selectors.btn);
     btn.classList.toggle(classes.active);
+
+    // remove is-active from all menu items if the menu is closed
+    if (!menu.classList.contains(classes.open)) {
+      const menuItems = document.querySelectorAll(selectors.menuParentItem);
+      menuItems.forEach((item) => {
+        item.classList.remove(classes.active);
+      });
+    }
   };
 
   // Toggle submenu

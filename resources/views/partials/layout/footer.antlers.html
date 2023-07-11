@@ -4,64 +4,51 @@
       <div class="md:col-span-4">
         <h3 class="font-black mb-32">Kontakt</h3>
         <ul>
+          {{ if contact_information:email }}
           <li>
-            <a href="mailto:alphacare@hin.ch" title="Senden Sie uns eine E-Mail">
-              alphacare@hin.ch
+            <a href="mailto:{{contact_information:email}}" target="_blank" title="Senden Sie uns eine E-Mail">
+              {{ contact_information:email }}
             </a>
           </li>
-          <li>
-            <a href="tel:043 268 74 70" title="Rufen Sie uns an">
-              043 268 74 70
-            </a>
-          </li>
+          {{ /if }}
+          {{ if contact_information:phone }}
+            <li>
+              <a href="tel:{{ contact_information:phone }}" target="_blank" title="Rufen Sie uns an">
+                {{ contact_information:phone }}              
+              </a>
+            </li>
+          {{ /if }}
         </ul>
       </div>
+
       <div class="md:col-span-4">
         <h3 class="font-black mb-32 mt-72 md:mt-0">Informieren</h3>
         <ul>
-          <li class="flex">
-            {{ partial:icons/arrow-right class="mr-12 text-white" }}
-            <a href="/" title="Über uns" class="py-4">
-              Über uns
-            </a>
-          </li>
-          <li class="flex">
-            {{ partial:icons/arrow-right class="mr-12 text-white" }}
-            <a href="/" title="Patienten" class="py-4">
-              Patienten
-            </a>
-          </li>
-          <li class="flex">
-            {{ partial:icons/arrow-right class="mr-12 text-white" }}
-            <a href="/" title="Kliniken und Ärzte" class="py-4">
-              Kliniken und Ärzte
-            </a>
-          </li>
+          {{ nav:info_nav }}
+            <li class="flex">
+              {{ partial:icons/arrow-right class="mr-12 text-white" }}
+              <a href="{{ url }}" title="{{ title }}" {{ if is_external }} target="_blank" {{ /if }} class="py-4">
+                {{ title }}
+              </a>
+            </li>
+          {{ /nav:info_nav }}
         </ul>
       </div>
+
       <div class="md:col-span-4">
         <h3 class="font-black mb-32 mt-72 md:mt-0">Privatsphäre</h3>
         <ul>
-          <li class="flex">
-            {{ partial:icons/arrow-right class="mr-12 text-white" }}
-            <a href="/" title="Impressum" class="py-4">
-              Impressum
-            </a>
-          </li>
-          <li class="flex">
-            {{ partial:icons/arrow-right class="mr-12 text-white" }}
-            <a href="/" title="Datenschutzerklärung" class="py-4">
-              Datenschutzerklärung
-            </a>
-          </li>
-          <li class="flex">
-            {{ partial:icons/arrow-right class="mr-12 text-white" }}
-            <a href="/" title="Nutzungsbedingungen" class="py-4">
-              Nutzungsbedingungen
-            </a>
-          </li>
+          {{ nav:privacy_nav }}
+            <li class="flex">
+              {{ partial:icons/arrow-right class="mr-12 text-white" }}
+              <a href="{{ url }}" title="{{ title }}" {{ if is_external }} target="_blank" {{ /if }} class="py-4">
+                {{ title }}
+              </a>
+            </li>
+          {{ /nav:privacy_nav }}
         </ul>
       </div>
+
       <div class="mt-32 md:col-span-12">
         <div>&copy; 2022 alphacare. Alle Rechte vorbehalten.</div>
       </div>
