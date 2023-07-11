@@ -26,22 +26,13 @@
 {{ vite src="resources/js/app.js" }}
 </head>
 <body class="font-regular text-graphite">
-  <header class="site-header">
-    <div>
-      <a href="/" title="Homepage anzeigen" class="block w-[94px] lg:w-[136px] h-auto">
-        {{ partial:icons/logo }}
-      </a>
-      <a href="javascript:;" class="btn-menu" data-btn-menu title="Menu anzeigen / verbergen">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
-      {{ partial:menu/main }}
-    </div>
-
-  </header>
-  {{# {{ partial:layout/header }}
-  {{ template_content }}
-  {{ partial:layout/footer }} #}}
+  {{ partial:layout/header }}
+  <main>
+    <div class="aspect-w-16 aspect-h-9 min-h-[300px] w-full bg-green-200"></div>
+  </main>
+  {{# 
+    {{ template_content }}
+  #}}
+  {{ partial:layout/footer }} 
 </body>
 </html>

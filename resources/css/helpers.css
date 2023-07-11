@@ -1,0 +1,7 @@
+.is-hidden {
+  @apply hidden;
+}
+
+.is-block {
+  @apply block
+}

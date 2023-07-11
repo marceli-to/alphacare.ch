@@ -1,0 +1,11 @@
+footer.site-footer {
+  @apply bg-graphite py-72 lg:py-108 xl:py-144 text-white;
+}
+
+footer.site-footer > div {
+  @apply container;
+}
+
+footer.site-footer > div a {
+  @apply block hover:text-azure hover:transition-all;
+}

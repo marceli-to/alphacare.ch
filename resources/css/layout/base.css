@@ -8,10 +8,15 @@ html {
 }
 
 body {
+  @apply flex flex-col min-h-screen;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+main {
+  @apply flex-1;
+}
+
 .container {
-  @apply max-w-[1404px] w-full 2xl:mx-auto bg-green-100 2xl:bg-red-200 px-27 2xl:px-36;
+  @apply max-w-[1404px] w-full 2xl:mx-auto px-27 2xl:px-48;
 }
