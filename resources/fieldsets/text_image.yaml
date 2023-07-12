@@ -21,6 +21,20 @@ fields:
       validate:
         - required
   -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Title
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      validate:
+        - required
+  -
     handle: text
     field:
       buttons:
@@ -45,6 +59,16 @@ fields:
       type: bard
       display: Text
       icon: bard
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: link
+    field:
+      type: link
+      display: Link
+      icon: link
       listable: hidden
       instructions_position: above
       visibility: visible

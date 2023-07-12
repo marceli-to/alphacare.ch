@@ -2,12 +2,12 @@
   {{ text }}
 {{ /if }}
 
-{{ if type == 'video'}}
-  {{ partial:components/video }}
-{{ /if }}
-
 {{ if type == 'collapsible' }}
   {{ partial:components/collapsible }}
+{{ /if }}
+
+{{ if type == 'masthead' }}
+  {{ partial:components/masthead }}
 {{ /if }}
 
 {{ if type == 'text_image' }}

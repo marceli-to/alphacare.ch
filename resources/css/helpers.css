@@ -5,3 +5,11 @@
 .is-block {
   @apply block
 }
+
+.bg-blue {
+  @apply bg-azure;
+}
+
+.bg-gray {
+  @apply bg-graphite;
+}

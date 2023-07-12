@@ -21,6 +21,7 @@ tabs:
               previews: true
               smart_typography: false
               buttons:
+                - h1
                 - h2
                 - h3
                 - bold
@@ -52,13 +53,6 @@ tabs:
                   instructions: null
                   icon: null
                   sets:
-                    video:
-                      display: Video
-                      instructions: null
-                      icon: media-webcam-video
-                      fields:
-                        -
-                          import: video
                     collapsible:
                       display: Collapsible
                       instructions: null
@@ -80,6 +74,13 @@ tabs:
                       fields:
                         -
                           import: image
+                    masthead:
+                      display: Masthead
+                      instructions: null
+                      icon: text-formatting-image-top
+                      fields:
+                        -
+                          import: masthead
               hide_display: false
   sidebar:
     display: Sidebar
@@ -91,18 +92,6 @@ tabs:
             field:
               type: slug
               localizable: true
-          -
-            handle: is_menu
-            field:
-              default: true
-              display: 'Show in menu'
-              type: toggle
-              icon: toggle
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              validate:
-                - required
           -
             handle: template
             field:

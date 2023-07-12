@@ -1,5 +1,5 @@
 .btn-menu {
-  @apply md:!hidden;
+  @apply lg:!hidden;
   display: block;
   height: 16px;
   width: 20px;

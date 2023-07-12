@@ -18,5 +18,5 @@ main {
 }
 
 .container {
-  @apply max-w-[1404px] w-full 2xl:mx-auto px-27 2xl:px-48;
+  @apply max-w-[1200px] w-full 2xl:mx-auto px-27 2xl:px-48;
 }

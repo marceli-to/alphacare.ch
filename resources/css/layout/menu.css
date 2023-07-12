@@ -1,15 +1,15 @@
 nav.site-menu {
-  @apply bg-white fixed md:relative top-[112px] md:top-auto left-0 md:left-auto w-full md:w-auto h-1 md:h-auto px-27 pt-27 md:p-0 opacity-0 md:opacity-100 z-50;
+  @apply bg-white fixed lg:relative top-[112px] lg:top-auto left-0 lg:left-auto w-full lg:w-auto h-1 lg:h-auto px-27 pt-27 lg:p-0 opacity-0 lg:opacity-100 z-50;
   transition: height .36s ease-in-out;
 }
 
 nav.site-menu.is-open {
-  @apply md:!h-auto opacity-100;
+  @apply lg:!h-auto opacity-100;
   height: calc(100vh - 112px);
 }
 
 nav.site-menu ul {
-  @apply opacity-0 md:opacity-100 transition-opacity duration-200 delay-200 ease-in-out;
+  @apply opacity-0 lg:opacity-100 transition-opacity duration-200 delay-200 ease-in-out;
 }
 
 nav.site-menu.is-open ul {
@@ -17,23 +17,23 @@ nav.site-menu.is-open ul {
 }
 
 nav.site-menu > ul {
-  @apply md:flex
+  @apply lg:flex
 }
 
 nav.site-menu > ul > li {
-  @apply md:relative md:ml-34;
+  @apply lg:relative lg:ml-34;
 }
 
 nav.site-menu > ul > li:first-child {
-  @apply md:ml-0;
+  @apply lg:ml-0;
 }
 
 nav.site-menu ul ul {
-  @apply ml-6 mb-6 md:m-0 md:pt-50 md:pb-20 md:px-20 md:absolute md:left-0 md:w-auto md:bg-white
+  @apply ml-6 mb-6 lg:m-0 lg:pt-50 lg:pb-18 lg:px-18 lg:absolute lg:left-0 lg:w-auto lg:bg-white
 }
 
 nav.site-menu ul li:last-child ul {
-  @apply md:left-auto md:right-0;
+  @apply lg:left-auto lg:right-0;
 }
 
 nav.site-menu ul a {
@@ -50,5 +50,9 @@ nav.site-menu ul a.is-current {
 }
 
 nav.site-menu ul ul a {
-  @apply text-base font-regular font-normal text-graphite;
+  @apply text-base font-regular font-normal text-graphite lg:py-5 lg:px-9;
+}
+
+nav.site-menu ul ul a:hover {
+  @apply lg:bg-snow;
 }

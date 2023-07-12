@@ -12,9 +12,18 @@ module.exports = {
 
     extend: {
 
+      aspectRatio: {
+        '1_5/1': '1.5/1',
+        '2/1': '2 / 1',
+        '3/1': '3 / 1',
+        '4/1': '4 / 1',
+        '5/1': '5 / 1',
+      },
+
       colors: {
         'azure': '#99d0e0',
         'graphite': '#706f6f',
+        'snow': '#f7f7f7',
       },
 
       fontFamily: {
@@ -38,7 +47,7 @@ module.exports = {
 
       screens: {
         'lg': '960px',
-        '2xl': '1404px',
+        '2xl': '1280px',
       },
     },
 

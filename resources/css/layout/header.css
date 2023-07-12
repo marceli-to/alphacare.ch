@@ -1,3 +1,7 @@
 header.site-header > div {
   @apply container flex items-center justify-between min-h-[112px] lg:min-h-[128px];
 }
+
+header.site-header {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.075);
+}
