@@ -1,5 +1,5 @@
 nav.site-menu {
-  @apply bg-white fixed lg:relative top-[112px] lg:top-auto left-0 lg:left-auto w-full lg:w-auto h-1 lg:h-auto px-27 pt-27 lg:p-0 opacity-0 lg:opacity-100 z-50;
+  @apply bg-white fixed lg:relative top-[112px] lg:top-auto left-0 lg:left-auto w-full lg:w-auto h-1 lg:h-auto px-36 pt-27 lg:p-0 opacity-0 lg:opacity-100 z-50;
   transition: height .36s ease-in-out;
 }
 

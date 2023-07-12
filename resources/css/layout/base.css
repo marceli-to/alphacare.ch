@@ -1,22 +1,18 @@
-/* * {
-  background: rgb(0 100 0 / 0.05) !important;
-} */
-
 html {
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
 
 body {
-  @apply flex flex-col min-h-screen;
+  @apply flex flex-col min-h-screen text-sm font-regular text-graphite leading-7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 main {
-  @apply flex-1;
+  @apply flex-1 pb-72;
 }
 
 .container {
-  @apply max-w-[1200px] w-full 2xl:mx-auto px-27 2xl:px-48;
+  @apply max-w-[1280px] w-full 2xl:mx-auto px-36 2xl:px-48;
 }

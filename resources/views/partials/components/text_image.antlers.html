@@ -1,12 +1,25 @@
-<div class="text-image md:grid md:grid-cols-2 md:gap-30 my-30 md:my-45 xl:my-60 {{ class }}">
-  {{ if image }}
-    <figure class="md:col-span-1 mb-20 md:mb-0 {{ if order == 'text-image'}} md:order-2 {{ /if }}">
-      <img src="{{ image.url }}" alt="{{ image.alt }}" width="{{ image.width }}" height="{{ image.height }}" />
-    </figure>
-  {{ /if }}
-  {{ if text }}
-    <div class="md:col-span-1 {{ if order == 'text-image'}} md:order-1 {{ /if }}">
-      {{ text }}
-    </div>
-  {{ /if }}
-</div>
+<section class="container mt-72 xl:mt-108">
+  <div class="lg:grid lg:grid-cols-2 lg:gap-60 xl:gap-72 {{ class }}">
+    {{ if image }}
+      <figure class="lg:col-span-1 mb-32 lg:mb-0 {{ if order == 'text-image'}} lg:order-2 {{ /if }}">
+        {{ partial:components/image :image="image" :width="'1200'" :height="'900'" :caption="image:alt" }}
+      </figure>
+    {{ /if }}
+    {{ if text }}
+      <div class="lg:col-span-1 text-md leading-8 flex flex-col justify-center {{ if order == 'text-image'}} lg:order-1 {{ /if }}">
+        <h2 class="font-semibold text-xl mb-36">{{ title }}</h2>
+        {{ text }}
+        {{ if link }}
+          <div class="mt-32 lg:mt-48">
+            <a 
+              href="{{ link }}" 
+              class="group font-semibold text-xxs lg:text-xs text-white hover:text-graphite bg-azure hover:bg-white border border-azure transition-all rounded-full inline-flex items-center leading-none w-auto py-14 px-32 lg:py-18 lg:px-42">
+              {{ link_text }}
+              {{ partial:icons/arrow-right class="ml-12 mt-2 text-white group-hover:text-graphite group-hover:translate-x-4 transition-all" }}
+            </a>
+          </div>
+        {{ /if }}
+      </div>
+    {{ /if }}
+  </div>
+</section>

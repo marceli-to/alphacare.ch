@@ -74,6 +74,18 @@ fields:
       visibility: visible
       hide_display: false
   -
+    handle: link_text
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Link text'
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
     handle: order
     field:
       options:
