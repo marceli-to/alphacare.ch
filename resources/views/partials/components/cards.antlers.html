@@ -1,0 +1,26 @@
+<section class="container py-72 xl:py-108">
+  <h3 class="font-semibold text-xl mb-36 xl:mb-72">{{ title }}</h3>
+  <div class="lg:grid lg:grid-cols-12 lg:gap-36">
+    {{ card }}
+      <div class="mb-72 last-of-type:mb-0 lg:mb-0 lg:col-span-4">
+        {{ partial:components/image :image="image" :width="'1200'" :height="'900'" :caption="image:alt" class="aspect-4/3 mb-32" }}
+
+        {{ if title }}  
+          <h4 class="font-semibold text-lg mb-27 xl:mb-18">
+            {{ title }}
+          </h4>
+        {{ /if }}
+        {{ if text }}
+          <div class="text-md leading-8">
+            {{ text }}
+            {{ if link }}
+              <a href="{{ link }}" class="text-azure hover:text-azure-dark hover:underline underline-offset-4 transition-all inline-block mt-27">
+                {{ link_text }}
+              </a>
+            {{ /if }}
+          </div>
+        {{ /if }}
+      </div>
+    {{ /card }}
+  </div>
+</section>

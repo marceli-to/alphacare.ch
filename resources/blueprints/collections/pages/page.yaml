@@ -14,70 +14,21 @@ tabs:
               validate:
                 - required
           -
-            handle: content
+            handle: elements
             field:
-              collapse: false
-              always_show_set_button: false
+              collapse: true
               previews: true
-              smart_typography: false
-              buttons:
-                - h1
-                - h2
-                - h3
-                - bold
-                - unorderedlist
-                - removeformat
-                - anchor
-              save_html: false
-              inline: false
-              toolbar_mode: fixed
-              link_noopener: false
-              link_noreferrer: false
-              target_blank: false
-              reading_time: false
               fullscreen: true
-              allow_source: true
-              enable_input_rules: true
-              enable_paste_rules: true
-              antlers: false
-              remove_empty_nodes: true
-              display: Content
-              type: bard
-              icon: bard
-              listable: hidden
-              instructions_position: above
-              visibility: visible
               sets:
-                content_blocks:
-                  display: 'Content blocks'
+                standard_items:
+                  display: 'Standard items'
                   instructions: null
-                  icon: null
+                  icon: layout-display-split-quarters
                   sets:
-                    collapsible:
-                      display: Collapsible
-                      instructions: null
-                      icon: text-formatting-markdown
-                      fields:
-                        -
-                          import: collapsible
-                    text_image:
-                      display: 'Text, Image'
-                      instructions: null
-                      icon: text-formatting-image-left
-                      fields:
-                        -
-                          import: text_image
-                    image:
-                      display: Image
-                      instructions: null
-                      icon: media-image-picture-orientation
-                      fields:
-                        -
-                          import: image
                     masthead:
                       display: Masthead
                       instructions: null
-                      icon: text-formatting-image-top
+                      icon: align-object-top
                       fields:
                         -
                           import: masthead
@@ -88,6 +39,66 @@ tabs:
                       fields:
                         -
                           import: banner
+                    text_image:
+                      display: 'Text, Image'
+                      instructions: null
+                      icon: text-formatting-wrap-image-left
+                      fields:
+                        -
+                          import: text_image
+                    collapsible:
+                      display: Collapsible
+                      instructions: null
+                      icon: form-drop-down-menu
+                      fields:
+                        -
+                          import: collapsible
+                    section:
+                      display: Section
+                      instructions: null
+                      icon: text-formatting-markdown
+                      fields:
+                        -
+                          import: bard
+                    cards:
+                      display: Cards
+                      instructions: null
+                      icon: layout-grid-dots
+                      fields:
+                        -
+                          import: cards
+                special_items:
+                  display: 'Special items'
+                  instructions: null
+                  icon: shopping-jewelry-diamond-gem
+                  sets:
+                    image:
+                      display: Image
+                      instructions: null
+                      icon: media-image-picture-orientation
+                      fields:
+                        -
+                          import: image
+                    anchor:
+                      display: Anchor
+                      instructions: null
+                      icon: link
+                      fields:
+                        -
+                          import: anchor_target
+                    info_box:
+                      display: 'Info box'
+                      instructions: null
+                      icon: alert-warning-exclamation-mark
+                      fields:
+                        -
+                          import: info_box
+              type: replicator
+              display: Elements
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
               hide_display: false
   sidebar:
     display: Sidebar

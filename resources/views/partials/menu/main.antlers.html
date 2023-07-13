@@ -15,7 +15,7 @@
             {{ children }}
             <li>
               <a 
-                href="{{if url | starts_with('#') }} {{ parent.url }}{{ url }} {{ else }} {{ url }} {{ /if }}"
+                href="{{if url | starts_with('#') }}{{ parent.url }}{{ url }}{{ else }}{{ url }}{{ /if }}"
                 {{ if is_external }} target="_blank" {{ /if }}>
                 {{ title }}
                 {{ partial:icons/chevron-right class="ml-8 mt-4 md:hidden" }}

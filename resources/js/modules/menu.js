@@ -11,13 +11,14 @@
     menu: '[data-menu]',
     menuParentItem: '[data-menu-parent-item]',
     menuChildItem: '[data-menu-child-item]',
+    menuChildItemLink: '[data-menu-child-item] a',
   };
 
   let screen = null;
 
   const init = () => {
     const btn = document.querySelector(selectors.btn);
-    btn.addEventListener('click', toggle);
+    btn.addEventListener('click', toggleMenu);
 
     // Set initial 'screen' value
     setScreen();
@@ -25,10 +26,16 @@
     // Debounce the setScreen function on window resize
     window.addEventListener('resize', debounce(setScreen, 200));
 
+    // on click menuChildItemLink close the menu
+    const menuChildItemLinks = document.querySelectorAll(selectors.menuChildItemLink);
+    menuChildItemLinks.forEach((item) => {
+      item.addEventListener('click', hideMenu);
+    });
+
   };
 
   // Toggle menu
-  const toggle = () => {
+  const toggleMenu = () => {
     const menu = document.querySelector(selectors.menu);
     menu.classList.toggle(classes.open);
     
@@ -42,6 +49,15 @@
         item.classList.remove(classes.active);
       });
     }
+  };
+
+  // Hide menu
+  const hideMenu = () => {
+    const menu = document.querySelector(selectors.menu);
+    menu.classList.remove(classes.open);
+
+    const btn = document.querySelector(selectors.btn);
+    btn.classList.remove(classes.active);
   };
 
   // Toggle submenu

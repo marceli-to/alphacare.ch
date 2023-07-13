@@ -10,10 +10,14 @@
   {{ partial:components/masthead }}
 {{ /if }}
 
+{{ if type == 'banner' }}
+  {{ partial:components/banner }}
+{{ /if }}
+
 {{ if type == 'text_image' }}
   {{ partial:components/text_image }}
 {{ /if }}
 
 {{ if type == 'image' }}
-{{ partial:components/image }}
+  {{ partial:components/image }}
 {{ /if }}

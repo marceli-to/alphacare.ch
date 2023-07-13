@@ -47,12 +47,15 @@ fields:
       instructions_position: above
       visibility: visible
       hide_display: false
+      if:
+        link: 'not null'
   -
     handle: theme
     field:
       options:
         blue: Blau
         gray: Grau
+        light-gray: Hellgrau
       taggable: false
       push_tags: false
       multiple: false
@@ -60,7 +63,7 @@ fields:
       clearable: false
       searchable: true
       cast_booleans: false
-      default: blue
+      default: light-gray
       type: select
       display: Theme
       icon: select

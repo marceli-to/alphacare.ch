@@ -13,3 +13,15 @@
 .bg-gray {
   @apply bg-graphite;
 }
+
+.bg-light-gray {
+  @apply bg-snow;
+}
+
+.bg-snow-anchors a {
+  @apply text-graphite underline underline-offset-4 transition-all;
+}
+
+.bg-snow-anchors a:hover {
+  @apply text-azure;
+}

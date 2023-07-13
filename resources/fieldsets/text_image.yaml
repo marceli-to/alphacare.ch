@@ -85,6 +85,8 @@ fields:
       instructions_position: above
       visibility: visible
       hide_display: false
+      if:
+        link: 'not null'
   -
     handle: order
     field:
@@ -105,3 +107,38 @@ fields:
       instructions_position: above
       visibility: visible
       hide_display: false
+  -
+    handle: full_width
+    field:
+      default: false
+      type: toggle
+      display: 'Full width?'
+      icon: toggle
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: theme
+    field:
+      options:
+        blue: Blau
+        gray: Grau
+        light-gray: Hellgrau
+      taggable: false
+      push_tags: false
+      multiple: false
+      max_items: 1
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: light-gray
+      type: select
+      display: Theme
+      icon: select
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      if:
+        full_width: 'equals true'
