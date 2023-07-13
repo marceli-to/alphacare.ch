@@ -40,7 +40,7 @@ tabs:
               enable_input_rules: true
               enable_paste_rules: true
               antlers: false
-              remove_empty_nodes: false
+              remove_empty_nodes: true
               display: Content
               type: bard
               icon: bard
@@ -81,6 +81,13 @@ tabs:
                       fields:
                         -
                           import: masthead
+                    banner:
+                      display: Banner
+                      instructions: null
+                      icon: align-object-center
+                      fields:
+                        -
+                          import: banner
               hide_display: false
   sidebar:
     display: Sidebar

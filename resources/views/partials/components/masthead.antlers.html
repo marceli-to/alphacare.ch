@@ -1,21 +1,17 @@
 {{ if image }}
-
-<div class="bg-{{bgcolor}} flex aspect-square sm:aspect-4/1 sm:min-h-[400px] md:min-h-[480px] max-h-[330px] sm:max-h-none xl:max-h-[465px] w-full relative">
-  {{ partial:components/picture :image="image" sizes="(min-width: 1024px) 1024px, (min-width: 1280px) 1600px, 90vw" }}
-  <div class="absolute w-full h-full bg-black opacity-[.15]"></div>
-  <h1 class="text-2xl sm:text-3xl md:text-4xl font-semi font-semibold text-white text-center leading-tight absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 z-50">
-    {{ title }}
-  </h1>
-</div>
-
-{{ else }}
-
-<div class="bg-{{bgcolor}} flex aspect-square sm:aspect-4/1 sm:min-h-[400px] md:min-h-[440px] max-h-[330px] sm:max-h-none xl:max-h-[465px] w-full relative">
-  <div class="container flex justify-center items-center">
-    <h1 class="text-2xl sm:text-3xl md:text-4xl font-semi font-semibold text-white text-center leading-none">
+  <div class="bg-{{theme}} flex aspect-square sm:aspect-4/1 sm:min-h-[400px] md:min-h-[480px] max-h-[330px] sm:max-h-none xl:max-h-[465px] w-full relative">
+    {{ partial:components/picture :image="image" sizes="(min-width: 1024px) 1024px, (min-width: 1280px) 1600px, 90vw" }}
+    <div class="absolute w-full h-full bg-black opacity-[.15]"></div>
+    <h1 class="text-2xl sm:text-3xl md:text-4xl font-semi font-semibold text-white text-center leading-tight absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 z-50">
       {{ title }}
     </h1>
   </div>
-</div>
-
+{{ else }}
+  <div class="bg-{{theme}} flex aspect-square sm:aspect-4/1 sm:min-h-[400px] md:min-h-[440px] max-h-[330px] sm:max-h-none xl:max-h-[465px] w-full relative">
+    <div class="container flex justify-center items-center">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-semi font-semibold text-white text-center leading-none">
+        {{ title }}
+      </h1>
+    </div>
+  </div>
 {{ /if }}
