@@ -42,23 +42,4 @@ fields:
       visibility: visible
       hide_display: false
   -
-    handle: theme
-    field:
-      options:
-        blue: Blau
-        gray: Grau
-      taggable: false
-      push_tags: false
-      multiple: false
-      max_items: 1
-      clearable: false
-      searchable: true
-      cast_booleans: false
-      default: blue
-      type: select
-      display: Theme
-      icon: select
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      hide_display: false
+    import: background_color

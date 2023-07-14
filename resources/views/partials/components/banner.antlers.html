@@ -1,8 +1,10 @@
-<section class="bg-{{ theme }} py-72 xl:py-108">
+<section class="theme-{{ background_color }} {{ if background_color != 'light-gray'}} text-white {{ /if }} py-72 xl:py-108">
   <div class="container flex flex-col justify-center items-center md:text-center">
-    <h2 class="font-semibold text-xl mb-36 lg:text-2xl">{{ title }}</h2>
-    <div class="text-md leading-8">
-      {{ text }}
-    </div>
+    <h2 class="text-xl lg:text-2xl leading-tight {{ if text }} mb-36 {{ /if }}">{{ title }}</h2>
+    {{ if text }}
+      <div class="text-md leading-8">
+        {{ text | nl2br }}
+      </div>
+    {{ /if }}
   </div>
 </section>

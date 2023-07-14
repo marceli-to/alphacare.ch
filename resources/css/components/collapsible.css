@@ -1,3 +1,11 @@
+.collapsibles {
+  @apply pt-72 xl:pt-108;
+}
+
+.collapsibles + .collapsibles {
+  @apply pt-56 xl:pt-72;
+}
+
 ::-webkit-details-marker {
   display: none;
 }
@@ -6,10 +14,23 @@ summary {
   @apply outline-none
 }
 
-details[open] .plus {
+details .open {
   @apply hidden
 }
 
-details[open] .minus {
+details[open] h3,
+details[open] svg {
+  @apply !text-azure;
+}
+
+details[open] .close {
+  @apply hidden
+}
+
+details[open] .open {
   @apply block
+}
+
+details > div a {
+  @apply hover:underline underline-offset-4 transition-all;
 }

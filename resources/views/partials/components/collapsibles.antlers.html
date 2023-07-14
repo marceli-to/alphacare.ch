@@ -1,0 +1,10 @@
+<section class="collapsibles {{if background_color }} theme-{{ background_color }} {{ /if }}">
+  <div class="container">
+    {{ if title }}
+      <h2 class="text-xl mb-32">{{ title }}</h2>
+    {{ /if }}
+    {{ collapsible }}
+      {{ partial:components/collapsible }}
+    {{ /collapsible }}
+  </div>
+</section>

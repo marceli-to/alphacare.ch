@@ -1,0 +1,42 @@
+title: Collapsibles
+fields:
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Title
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: collapsible
+    field:
+      collapse: false
+      previews: true
+      fullscreen: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          instructions: null
+          icon: null
+          sets:
+            collapsible:
+              display: Collapsible
+              instructions: null
+              icon: form-drop-down-menu
+              fields:
+                -
+                  import: collapsible
+      type: replicator
+      display: Collapsibles
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    import: background_color

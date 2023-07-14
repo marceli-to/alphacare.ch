@@ -1,22 +1,26 @@
 <section class="container py-72 xl:py-108">
-  <h3 class="font-semibold text-xl mb-36 xl:mb-72">{{ title }}</h3>
-  <div class="lg:grid lg:grid-cols-12 lg:gap-36">
+  <h3 class=" text-xl mb-36 xl:mb-72">{{ title }}</h3>
+  <div class="lg:grid lg:grid-cols-12 lg:gap-36 lg:gap-y-56">
     {{ card }}
-      <div class="mb-72 last-of-type:mb-0 lg:mb-0 lg:col-span-4">
-        {{ partial:components/image :image="image" :width="'1200'" :height="'900'" :caption="image:alt" class="aspect-4/3 mb-32" }}
-
+      <div class="mb-56 last-of-type:mb-0 lg:mb-0 lg:col-span-4">
+        {{ if image }}
+          {{ partial:components/image :image="image" :width="'1200'" :height="'900'" :caption="image:alt" class="aspect-4/3 mb-32" }}
+        {{ /if }}
+        {{ if card_icon != null }}
+          {{ partial:icons/{{card_icon}} class="w-48 h-48 xl:w-84 xl:h-84 block text-azure mb-18 xl:mb-32" }}
+        {{ /if }}
         {{ if title }}  
-          <h4 class="font-semibold text-lg mb-27 xl:mb-18">
+          <h4 class="text-lg mb-27 xl:mb-18">
             {{ title }}
           </h4>
         {{ /if }}
         {{ if text }}
-          <div class="text-md leading-8">
+          <div class="text-base leading-7">
             {{ text }}
             {{ if link }}
-              <a href="{{ link }}" class="text-azure hover:text-azure-dark hover:underline underline-offset-4 transition-all inline-block mt-27">
-                {{ link_text }}
-              </a>
+              <div class="mt-27">
+                {{ partial:components/link }}
+              </div>
             {{ /if }}
           </div>
         {{ /if }}

@@ -64,29 +64,7 @@ fields:
       visibility: visible
       hide_display: false
   -
-    handle: link
-    field:
-      type: link
-      display: Link
-      icon: link
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      hide_display: false
-  -
-    handle: link_text
-    field:
-      input_type: text
-      antlers: false
-      type: text
-      display: 'Link text'
-      icon: text
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      hide_display: false
-      if:
-        link: 'not null'
+    import: link
   -
     handle: order
     field:
@@ -119,26 +97,4 @@ fields:
       visibility: visible
       hide_display: false
   -
-    handle: theme
-    field:
-      options:
-        blue: Blau
-        gray: Grau
-        light-gray: Hellgrau
-      taggable: false
-      push_tags: false
-      multiple: false
-      max_items: 1
-      clearable: false
-      searchable: true
-      cast_booleans: false
-      default: light-gray
-      type: select
-      display: Theme
-      icon: select
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      hide_display: false
-      if:
-        full_width: 'equals true'
+    import: background_color

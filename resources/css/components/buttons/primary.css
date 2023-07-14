@@ -1,0 +1,7 @@
+.btn-primary {
+  @apply font-semibold text-xxs lg:text-xs text-white hover:text-graphite bg-azure hover:bg-white border border-azure transition-all rounded-full inline-flex items-center leading-none w-auto py-14 px-32 lg:py-18 lg:px-42
+}
+
+.theme-light-gray .btn-primary {
+  @apply text-white hover:text-graphite bg-graphite hover:bg-transparent border border-graphite
+}

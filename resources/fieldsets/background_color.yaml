@@ -1,0 +1,24 @@
+title: 'Background color'
+fields:
+  -
+    handle: background_color
+    field:
+      options:
+        light-gray: 'Light gray'
+        blue: Blue
+        gray: Gray
+      taggable: false
+      push_tags: false
+      multiple: false
+      max_items: 1
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: light-gray
+      type: select
+      display: 'Background color'
+      icon: select
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

@@ -33,7 +33,6 @@ fields:
                   handle: image
                   field:
                     max_files: 1
-                    min_files: 1
                     mode: list
                     container: assets
                     restrict: false
@@ -47,6 +46,37 @@ fields:
                     instructions_position: above
                     visibility: visible
                     hide_display: false
+                    width: 50
+                -
+                  handle: card_icon
+                  field:
+                    options:
+                      'null': None
+                      chain: Chain
+                      child: Child
+                      clock: Clock
+                      doctor: 'Medical doctor'
+                      heart: Heart
+                      hospital: Hospital
+                      line-chart: 'Line chart'
+                      medkit: Medkit
+                      puzzle-piece: 'Puzzle piece'
+                    taggable: false
+                    push_tags: false
+                    multiple: false
+                    max_items: 1
+                    clearable: false
+                    searchable: true
+                    cast_booleans: false
+                    default: 'null'
+                    type: select
+                    display: Icon
+                    icon: select
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    width: 50
                 -
                   handle: title
                   field:
@@ -71,31 +101,7 @@ fields:
                     visibility: visible
                     hide_display: false
                 -
-                  handle: link
-                  field:
-                    collections:
-                      - pages
-                    type: link
-                    display: Link
-                    icon: link
-                    listable: hidden
-                    instructions_position: above
-                    visibility: visible
-                    hide_display: false
-                -
-                  handle: link_text
-                  field:
-                    input_type: text
-                    antlers: false
-                    type: text
-                    display: 'Link text'
-                    icon: text
-                    listable: hidden
-                    instructions_position: above
-                    visibility: visible
-                    hide_display: false
-                    if:
-                      link: 'not null'
+                  import: link
       type: replicator
       display: Card
       icon: replicator

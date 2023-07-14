@@ -1,0 +1,100 @@
+title: Link
+fields:
+  -
+    handle: link
+    field:
+      type: link
+      display: Link
+      icon: link
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: link_text
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Link text'
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      if:
+        link: 'not null'
+  -
+    handle: link_target
+    field:
+      options:
+        _self: 'Same window'
+        _blank: 'New window'
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: 'Link target'
+      icon: select
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      if:
+        link: 'not null'
+      width: 33
+      max_items: 1
+      default: _self
+  -
+    handle: link_type
+    field:
+      options:
+        text: Text
+        button: Button
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: 'Link type'
+      icon: select
+      width: 33
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      if:
+        link: 'not null'
+      max_items: 1
+      default: text
+  -
+    handle: link_icon
+    field:
+      options:
+        'null': None
+        arrow-right: 'Arrow right'
+        arrow-down: 'Arrow down'
+        arrow-up: 'Arrow up'
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: 'Link icon'
+      icon: select
+      width: 33
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      if:
+        link: 'not null'
+      max_items: 1
+      default: 'null'

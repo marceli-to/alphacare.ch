@@ -1,0 +1,22 @@
+/* Light gray */
+.theme-light-gray {
+  @apply bg-snow;
+}
+
+.theme-light-gray a:not(.btn-primary) {
+  @apply text-graphite underline underline-offset-4 transition-all;
+}
+
+.theme-light-gray a:not(.btn-primary):hover {
+  @apply text-azure;
+}
+
+/* Blue */
+.theme-blue {
+  @apply bg-azure;
+}
+
+/* Gray */
+.theme-gray {
+  @apply bg-graphite;
+}

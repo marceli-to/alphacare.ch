@@ -14,14 +14,22 @@
   {{ partial:components/anchor }}
 {{ /if }}
 
-{{ if type == 'info_box' }}
-  {{ partial:components/info_box }}
+{{ if type == 'panel' }}
+  {{ partial:components/panel }}
 {{ /if }}
 
 {{ if type == 'cards' }}
   {{ partial:components/cards }}
 {{ /if }}
 
+{{ if type == 'text' }}
+  {{ partial:components/text_only }}
+{{ /if }}
+
 {{ if type == 'text_image' }}
   {{ partial:components/text_image }}
+{{ /if }}
+
+{{ if type == 'collapsibles' }}
+  {{ partial:components/collapsibles }}
 {{ /if }}

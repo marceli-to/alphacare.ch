@@ -1,5 +1,5 @@
 footer.site-footer {
-  @apply bg-graphite py-72 lg:py-108 xl:py-144 mt-24 lg:mt-96 text-white;
+  @apply bg-graphite py-72 lg:py-108 xl:py-144 mt-24 lg:mt-48 text-white;
 }
 
 footer.site-footer > div {

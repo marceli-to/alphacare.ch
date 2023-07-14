@@ -18,10 +18,14 @@
   @apply bg-snow;
 }
 
-.bg-snow-anchors a {
-  @apply text-graphite underline underline-offset-4 transition-all;
+b, strong {
+  @apply font-semibold;
 }
 
-.bg-snow-anchors a:hover {
-  @apply text-azure;
+section p {
+  @apply mb-15 xl:mb-25;
+}
+
+section p:last-of-type {
+  @apply mb-0;
 }
