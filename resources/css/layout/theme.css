@@ -4,7 +4,7 @@
 }
 
 .theme-light-gray a:not(.btn-primary) {
-  @apply text-graphite underline underline-offset-4 transition-all;
+  @apply text-graphite underline decoration-1 underline-offset-4 transition-all;
 }
 
 .theme-light-gray a:not(.btn-primary):hover {

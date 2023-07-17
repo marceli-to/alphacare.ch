@@ -36,5 +36,5 @@ details[open] .open {
 }
 
 details > div a {
-  @apply underline underline-offset-4 transition-all hover:no-underline
+  @apply underline underline-offset-4 decoration-1 transition-all hover:no-underline
 }

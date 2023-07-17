@@ -13,6 +13,7 @@ module.exports = {
     extend: {
 
       aspectRatio: {
+        '2/3': '2 / 3',
         '4/1': '4 / 1',
         '4/3': '4 / 3',
         '16/9': '16 / 9',
@@ -41,7 +42,7 @@ module.exports = {
         'sm': '1.0625rem', // 17px
         'xs': '1rem', // 16px
         'xxs': '0.9375rem', // 15px
-        'tiny': '0.75rem', // 12px
+        'tiny': '0.8125rem', // 13px
       },
 
       screens: {

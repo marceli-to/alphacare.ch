@@ -100,6 +100,13 @@ tabs:
                       fields:
                         -
                           import: jobs
+                    team_members:
+                      display: 'Team members'
+                      instructions: null
+                      icon: user-multiple
+                      fields:
+                        -
+                          import: team_member
               type: replicator
               display: Elements
               icon: replicator
