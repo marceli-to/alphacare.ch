@@ -14,6 +14,10 @@ summary {
   @apply outline-none
 }
 
+details p {
+  @apply !mb-5;
+}
+
 details .open {
   @apply hidden
 }

@@ -1,0 +1,28 @@
+<section class="{{ if background_color }} theme-{{ background_color }} {{ /if }} py-72 xl:py-108">
+  <div class="container">
+    <h3 class="text-xl mb-27">{{ title }}</h3>
+    {{ if text }}
+      <div class="text-md leading-8">
+        {{ text }}
+      </div>
+    {{ /if }}
+    
+    {{ if jobs }}
+      <div class="lg:grid lg:grid-cols-12 lg:gap-36 lg:gap-y-56 mt-36 lg:mt-72">
+        {{ jobs }}
+          <div class="lg:col-span-6 bg-white mt-36 lg:mt-0 p-27 lg:p-56">
+            <h4 class="text-lg mb-9">{{ title }}</h4>
+            {{ if text }}
+              {{ text }}
+            {{ /if }}
+            {{ if link }}
+              <div class="mt-27">
+                {{ partial:components/link }}
+              </div>
+            {{ /if }}
+          </div>
+        {{ /jobs }}
+      </div>
+    {{ /if }}
+  </div>
+</section>

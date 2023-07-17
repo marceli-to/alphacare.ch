@@ -5,7 +5,7 @@
     class="group btn-primary">
     {{ link_text }}
     {{ if link_icon != 'null' }}
-      {{ partial:icons/{{link_icon}} class="ml-12 mt-2 text-white group-hover:text-graphite group-hover:translate-x-2 transition-all" }}
+      {{ partial:icons/{{link_icon}} class="ml-12 mt-2  group-hover:text-graphite group-hover:translate-x-2 transition-all" }}
     {{ /if }}
   </a>
 {{ /if }}
@@ -14,7 +14,7 @@
   <a href="{{ link }}" class="text-azure hover:text-azure-dark hover:underline underline-offset-4 transition-all inline-flex group">
     {{ link_text }}
     {{ if link_icon != 'null' }}
-      {{ partial:icons/{{link_icon}} class="ml-8 group-hover:translate-y-2 transition-all" }}
+      {{ partial:icons/{{link_icon}} class="ml-8 group-hover:translate-y-2" }}
     {{ /if }}
   </a>
 {{ /if }}

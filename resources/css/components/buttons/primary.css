@@ -2,6 +2,26 @@
   @apply font-semibold text-xxs lg:text-xs text-white hover:text-graphite bg-azure hover:bg-white border border-azure transition-all rounded-full inline-flex items-center leading-none w-auto py-14 px-32 lg:py-18 lg:px-42
 }
 
+.btn-primary svg {
+  @apply text-white;
+}
+
 .theme-light-gray .btn-primary {
   @apply text-white hover:text-graphite bg-graphite hover:bg-transparent border border-graphite
+}
+
+.theme-light-gray .btn-primary svg {
+  @apply text-white;
+}
+
+.theme-blue .btn-primary {
+  @apply text-graphite hover:text-white bg-white hover:bg-transparent border border-white
+}
+
+.theme-blue .btn-primary svg {
+  @apply text-graphite;
+}
+
+.theme-blue .btn-primary:hover svg {
+  @apply text-white;
 }

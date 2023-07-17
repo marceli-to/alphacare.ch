@@ -1,13 +1,24 @@
-title: Text
+title: Jobs
 fields:
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Title
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
   -
     handle: text
     field:
       buttons:
-        - h2
-        - h3
         - bold
         - unorderedlist
+        - removeformat
         - anchor
       smart_typography: false
       save_html: false
@@ -33,18 +44,31 @@ fields:
       instructions_position: above
       visibility: visible
       hide_display: false
-      sets:
-        collapsibles:
-          display: Collapsibles
-          instructions: null
-          icon: form-drop-down-menu
-          sets:
-            collapsibles:
-              display: Collapsibles
-              instructions: null
-              icon: form-drop-down-menu
-              fields:
-                -
-                  import: collapsibles
   -
     import: background_color
+  -
+    handle: jobs
+    field:
+      collapse: false
+      previews: true
+      fullscreen: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          instructions: null
+          icon: null
+          sets:
+            jobs:
+              display: Jobs
+              instructions: null
+              icon: text-formatting-initial-letter
+              fields:
+                -
+                  import: job
+      type: replicator
+      display: Jobs
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

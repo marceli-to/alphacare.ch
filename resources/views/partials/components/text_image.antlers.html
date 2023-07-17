@@ -1,5 +1,5 @@
 {{ if full_width }}
-  <section class="theme-{{ background_color }} py-72 xl:py-108 mt-72 xl:mt-108">
+  <section class="{{ if background_color }} theme-{{ background_color }} {{ /if }} py-72 xl:py-108 {{ if background_color && background_color != 'white' }} mt-72 xl:mt-108 {{ /if }}">
     <div class="container lg:grid lg:grid-cols-2 lg:gap-60 xl:gap-72 {{ class }}">
       {{ if image }}
         <figure class="lg:col-span-1 mb-32 lg:mb-0 {{ if order == 'text-image'}} lg:order-2 {{ /if }}">
@@ -29,7 +29,7 @@
       {{ /if }}
       {{ if text }}
         <div class="lg:col-span-1 text-md leading-8 flex flex-col justify-center {{ if order == 'text-image'}} lg:order-1 {{ /if }}">
-          <h2 class="text-xl mb-36 lg:text-2xl">{{ title }}</h2>
+          <h2 class="text-xl lg:text-2xl mb-36">{{ title }}</h2>
           {{ text }}
           {{ if link }}
             <div class="mt-32 lg:mt-48">

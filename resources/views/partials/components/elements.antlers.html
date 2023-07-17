@@ -1,7 +1,3 @@
-{{ if type == 'collapsible' }}
-  {{ partial:components/collapsible }}
-{{ /if }}
-
 {{ if type == 'masthead' }}
   {{ partial:components/masthead }}
 {{ /if }}
@@ -22,14 +18,26 @@
   {{ partial:components/cards }}
 {{ /if }}
 
-{{ if type == 'text' }}
-  {{ partial:components/text_only }}
-{{ /if }}
-
 {{ if type == 'text_image' }}
   {{ partial:components/text_image }}
 {{ /if }}
 
 {{ if type == 'collapsibles' }}
   {{ partial:components/collapsibles }}
+{{ /if }}
+
+{{ if type == 'collapsible' }}
+  {{ partial:components/collapsible }}
+{{ /if }}
+
+{{ if type == 'bard' }}
+  {{ partial:components/bard }}
+{{ /if }}
+
+{{ if type == 'partnerships' }}
+  {{ partial:components/partnerships }}
+{{ /if }}
+
+{{ if type == 'jobs' }}
+  {{ partial:components/jobs }}
 {{ /if }}

@@ -13,6 +13,21 @@ fields:
       visibility: visible
       hide_display: false
   -
+    handle: text
+    field:
+      antlers: false
+      type: textarea
+      display: Text
+      icon: textarea
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    import: background_color
+  -
+    import: grid
+  -
     handle: card
     field:
       collapse: true
@@ -52,15 +67,23 @@ fields:
                   field:
                     options:
                       'null': None
+                      bullhorn: Bullhorn
                       chain: Chain
                       child: Child
                       clock: Clock
+                      comments: Comments
                       doctor: 'Medical doctor'
+                      envelope: Envelope
+                      eye: Eye
                       heart: Heart
                       hospital: Hospital
                       line-chart: 'Line chart'
                       medkit: Medkit
+                      people: People
+                      plane: Plane
                       puzzle-piece: 'Puzzle piece'
+                      trophy: Trophy
+                      umbrella: Umbrella
                     taggable: false
                     push_tags: false
                     multiple: false

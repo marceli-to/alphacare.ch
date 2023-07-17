@@ -1,25 +1,25 @@
-title: 'Background color'
+title: Grid
 fields:
   -
-    handle: background_color
+    handle: items_per_row
     field:
       options:
-        light-gray: 'Light gray'
-        blue: Blue
-        gray: Gray
-        white: White
+        col-span-6: '2'
+        col-span-4: '3'
+        col-span-3: '4'
+        col-span-2: '6'
       taggable: false
       push_tags: false
       multiple: false
-      max_items: 1
       clearable: false
       searchable: true
       cast_booleans: false
-      default: light-gray
       type: select
-      display: 'Background color'
+      display: 'Items per row'
       icon: select
       listable: hidden
       instructions_position: above
       visibility: visible
       hide_display: false
+      max_items: 1
+      default: col-span-4

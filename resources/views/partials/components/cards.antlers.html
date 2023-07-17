@@ -1,30 +1,38 @@
-<section class="container py-72 xl:py-108">
-  <h3 class=" text-xl mb-36 xl:mb-72">{{ title }}</h3>
-  <div class="lg:grid lg:grid-cols-12 lg:gap-36 lg:gap-y-56">
-    {{ card }}
-      <div class="mb-56 last-of-type:mb-0 lg:mb-0 lg:col-span-4">
-        {{ if image }}
-          {{ partial:components/image :image="image" :width="'1200'" :height="'900'" :caption="image:alt" class="aspect-4/3 mb-32" }}
-        {{ /if }}
-        {{ if card_icon != null }}
-          {{ partial:icons/{{card_icon}} class="w-48 h-48 xl:w-84 xl:h-84 block text-azure mb-18 xl:mb-32" }}
-        {{ /if }}
-        {{ if title }}  
-          <h4 class="text-lg mb-27 xl:mb-18">
-            {{ title }}
-          </h4>
-        {{ /if }}
-        {{ if text }}
-          <div class="text-base leading-7">
-            {{ text }}
-            {{ if link }}
-              <div class="mt-27">
-                {{ partial:components/link }}
-              </div>
-            {{ /if }}
-          </div>
-        {{ /if }}
+<section class="{{ if background_color }} theme-{{ background_color }} {{ /if }} py-72 xl:py-108">
+  <div class="container">
+    <h3 class=" text-xl {{ if text }} mb-9 xl:mb-18 {{ else }} mb-36 xl:mb-72 {{ /if }}">{{ title }}</h3>
+    {{  if text }}
+      <div class="text-md mb-36 xl:mb-56">
+        {{ text }}
       </div>
-    {{ /card }}
+    {{ /if }}
+
+    <div class="lg:grid lg:grid-cols-12 lg:gap-36 lg:gap-y-56">
+      {{ card }}
+        <div class="mb-56 last-of-type:mb-0 lg:mb-0 lg:col-span-4 {{ if items_per_row }} lg:{{ items_per_row}} {{ /if }}">
+          {{ if image }}
+            {{ partial:components/image :image="image" :width="'1200'" :height="'900'" :caption="image:alt" class="aspect-4/3 mb-32" }}
+          {{ /if }}
+          {{ if card_icon != null }}
+            {{ partial:icons/{{card_icon}} class="w-48 h-48 xl:w-84 xl:h-84 block text-azure mb-18 xl:mb-32" }}
+          {{ /if }}
+          {{ if title }}  
+            <h4 class="text-lg mb-27 xl:mb-18">
+              {{ title }}
+            </h4>
+          {{ /if }}
+          {{ if text }}
+            <div class="text-base leading-7">
+              {{ text }}
+              {{ if link }}
+                <div class="mt-27">
+                  {{ partial:components/link }}
+                </div>
+              {{ /if }}
+            </div>
+          {{ /if }}
+        </div>
+      {{ /card }}
+    </div>
   </div>
 </section>

@@ -39,13 +39,6 @@ tabs:
                       fields:
                         -
                           import: banner
-                    text:
-                      display: Text
-                      instructions: null
-                      icon: text-formatting-initial-letter
-                      fields:
-                        -
-                          import: text_only
                     text_image:
                       display: 'Text, Image'
                       instructions: null
@@ -67,6 +60,13 @@ tabs:
                       fields:
                         -
                           import: collapsibles
+                    bard:
+                      display: Bard
+                      instructions: null
+                      icon: text-formatting-markdown
+                      fields:
+                        -
+                          import: bard
                 special_items:
                   display: 'Special items'
                   instructions: null
@@ -86,6 +86,20 @@ tabs:
                       fields:
                         -
                           import: panel
+                    partnerships:
+                      display: Partnerships
+                      instructions: null
+                      icon: globe-world-wide-web
+                      fields:
+                        -
+                          import: partnerships
+                    jobs:
+                      display: Jobs
+                      instructions: null
+                      icon: text-formatting-initial-letter
+                      fields:
+                        -
+                          import: jobs
               type: replicator
               display: Elements
               icon: replicator

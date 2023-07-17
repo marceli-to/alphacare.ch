@@ -1,0 +1,32 @@
+<section class="{{ if background_color }} theme-{{ background_color }} {{ /if }} py-72 xl:py-108">
+  <div class="container">
+    <div class="lg:grid lg:grid-cols-12 lg:gap-56 xl:gap-y-72 lg:place-items-center">
+      <div class="hidden lg:block lg:col-span-6">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-36">
+        {{ partners }}
+          <div class="col-span-4 flex items-center justify-center">
+            {{ if link }}
+              <a href="{{ link }}" target="_blank" class="group">
+                <img src="{{ logo }}" width="{{ logo:width }}" height="{{ logo:height }}" alt="{{ title }}" class="block grayscale group-hover:grayscale-0 transition-all" />
+              </a>
+            {{ else }}
+              <img src="{{ logo }}" width="{{ logo:width }}" height="{{ logo:height }}" alt="{{ title }}" class="block grayscale" />
+            {{ /if }}
+          </div>
+        {{ /partners  }}
+        </div>
+      </div>
+      <article class="lg:col-span-6">
+        <h2>{{title}}</h2>
+        <div class="text-md">
+        {{ text }}
+        </div>
+        {{ if link }}
+          <div class="mt-36">
+            {{ partial:components/link }}
+          </div>
+        {{ /if }}
+      </article>
+    </div>
+  </div>
+</section>

@@ -1,12 +1,13 @@
-title: Masthead
+title: Partner
 fields:
   -
     handle: title
     field:
+      input_type: text
       antlers: false
-      type: textarea
+      type: text
       display: Title
-      icon: textarea
+      icon: text
       listable: hidden
       instructions_position: above
       visibility: visible
@@ -14,34 +15,30 @@ fields:
       validate:
         - required
   -
-    handle: byline
+    handle: logo
     field:
-      antlers: false
-      type: textarea
-      display: Byline
-      icon: textarea
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      hide_display: false
-  -
-    handle: image
-    field:
-      max_files: 1
       mode: list
       container: assets
+      folder: logos
       restrict: false
       allow_uploads: true
       show_filename: true
       show_set_alt: true
       type: assets
-      display: Image
+      display: Logo
       icon: assets
       listable: hidden
       instructions_position: above
       visibility: visible
       hide_display: false
+      max_files: 1
   -
-    import: background_color
-  -
-    import: link
+    handle: link
+    field:
+      type: link
+      display: Link
+      icon: link
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

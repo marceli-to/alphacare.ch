@@ -20,3 +20,12 @@
 .theme-gray {
   @apply bg-graphite;
 }
+
+/* White */
+.theme-white .btn-primary:hover {
+  @apply bg-transparent text-graphite border-graphite;
+}
+
+.theme-white .btn-primary:hover svg {
+  @apply text-graphite;
+}
