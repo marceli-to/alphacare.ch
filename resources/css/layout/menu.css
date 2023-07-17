@@ -1,19 +1,19 @@
 nav.site-menu {
-  @apply bg-white fixed lg:relative top-[112px] lg:top-auto left-0 lg:left-auto w-full lg:w-auto h-1 lg:h-auto px-36 pt-27 lg:p-0 opacity-0 lg:opacity-100 -z-50 lg:z-50;
+  @apply bg-white fixed lg:relative top-[112px] lg:top-auto left-0 lg:left-auto w-full lg:w-auto h-1 lg:h-auto px-36 pt-27 lg:p-0 opacity-0 lg:opacity-100 -z-50 lg:z-50 pointer-events-none lg:pointer-events-auto;
   transition: height .36s ease-in-out;
 }
 
 nav.site-menu.is-open {
-  @apply lg:!h-auto opacity-100 z-50;
+  @apply lg:!h-auto opacity-100 z-50 pointer-events-auto;
   height: calc(100vh - 112px);
 }
 
 nav.site-menu ul {
-  @apply opacity-0 lg:opacity-100 transition-opacity duration-200 delay-200 ease-in-out -z-50 lg:z-50;
+  @apply opacity-0 lg:opacity-100 transition-opacity duration-200 delay-200 ease-in-out;
 }
 
 nav.site-menu.is-open ul {
-  @apply opacity-100 z-50
+  @apply opacity-100
 }
 
 nav.site-menu > ul {

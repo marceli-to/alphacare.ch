@@ -1,9 +1,9 @@
 .collapsibles {
-  @apply pt-72 xl:pt-108;
+  @apply py-72 xl:py-108;
 }
 
 .collapsibles + .collapsibles {
-  @apply pt-56 xl:pt-72;
+  @apply !pt-0;
 }
 
 ::-webkit-details-marker {
@@ -15,7 +15,7 @@ summary {
 }
 
 details p {
-  @apply !mb-5;
+  @apply !mb-10;
 }
 
 details .open {
@@ -36,5 +36,5 @@ details[open] .open {
 }
 
 details > div a {
-  @apply hover:underline underline-offset-4 transition-all;
+  @apply underline underline-offset-4 transition-all hover:no-underline
 }
