@@ -10,7 +10,7 @@ body {
 }
 
 main {
-  @apply flex-1 pb-72;
+  @apply flex-1  z-40;
 }
 
 .container {
