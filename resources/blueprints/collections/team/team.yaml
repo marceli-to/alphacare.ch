@@ -61,7 +61,19 @@ tabs:
               input_type: email
               antlers: false
               type: text
-              display: E-Mail
+              display: Email
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: phone
+            field:
+              input_type: tel
+              antlers: false
+              type: text
+              display: Phone
               icon: text
               listable: hidden
               instructions_position: above
@@ -99,6 +111,7 @@ tabs:
               buttons:
                 - h3
                 - bold
+                - unorderedlist
                 - removeformat
                 - anchor
               smart_typography: false

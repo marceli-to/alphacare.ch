@@ -1,0 +1,71 @@
+<section class="bg-snow lg:min-h-[280px] lg:min-h-[320px] py-72 xl:py-108">
+  <div class="container">
+    <div class="md:grid md:grid-cols-12 md:gap-x-56 -mt-140 md:-mt-160 lg:-mt-180 xl:-mt-200 relative z-80">
+      <div class="md:col-span-4 text-md mb-36 md:mb-0 py-36 px-12 lg:p-56 flex flex-col items-center justify-start  bg-white shadow-[0px_0px_30px_rgba(0,0,0,0.075)]">
+        {{ partial:icons/phone class="w-48 h-auto text-azure" }}
+        <h3 class="text-lg mt-27">Telefon</h3>
+        <a href="tel:{{ contact_information:phone }}" class="mt-9 hover:underline hover:text-graphite decoration-1 underline-offset-4 transition-all">
+          {{ contact_information:phone }}
+        </a>
+      </div>
+      <div class="md:col-span-4 text-md mb-36 md:mb-0 py-36 px-12 lg:p-56 flex flex-col items-center justify-start  bg-white shadow-[0px_0px_30px_rgba(0,0,0,0.075)]">
+        {{ partial:icons/mail class="w-48 h-auto text-azure" }}
+        <h3 class="text-lg mt-27">E-Mail</h3>
+        <a href="mailto:{{ contact_information:email }}" class="mt-9 hover:underline hover:text-graphite decoration-1 underline-offset-4 transition-all">
+          {{ contact_information:email }}
+        </a>
+      </div>
+      <div class="md:col-span-4 text-md py-36 px-12 lg:p-56 flex flex-col items-center justify-start  bg-white shadow-[0px_0px_30px_rgba(0,0,0,0.075)]">
+        {{ partial:icons/pin class="w-24 h-auto text-azure" }}
+        <h3 class="text-lg mt-27">E-Mail</h3>
+        <a href="https://goo.gl/maps/ErUWFKcXXYRT7Gaz5" class="mt-9 text-center hover:underline hover:text-graphite decoration-1 underline-offset-4 transition-all">
+          {{ contact_information:address | nl2br }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-72 xl:py-108">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="text-xl lg:text-2xl">{{ title }}</h2>
+      <div class="mt-27 lg:mt-36">
+        {{ text }}
+      </div>
+    </div>
+    <div class="lg:grid lg:grid-cols-12 lg:gap-56 xl:gap-72 mt-56">
+      {{ locations }}
+        <div class="text-base leading-8 text-center lg:col-span-6 bg-snow flex flex-col justify-center items-center px-36 py-36 lg:py-56 mb-36 last-of-type:mb-0 lg:mb-0">
+          <h3 class="text-lg">{{ title }}</h3>
+          {{ if address }}
+            <address class="font-regular mt-18 leading-7 not-italic">
+              {{ address | nl2br }}
+            </address>
+          {{ /if }}
+          {{ if phone }}
+            <div class="mt-18">
+              Dienstnummer:<br>
+              <a 
+                href="tel:{{ phone }}" 
+                title="{{ title }} per Telefon kontaktieren"
+                class="hover:underline hover:text-graphite decoration-1 underline-offset-4 transition-all">
+                {{ phone }}
+              </a>
+            </div>
+          {{ /if }}
+          {{ if website }}
+            <div class="mt-18">
+              <a 
+                href="{{ website }}" 
+                title="Besuchen Sie unsere {{ website }}"
+                class="flex hover:underline hover:text-graphite decoration-1 underline-offset-4 transition-all">
+                Zur Webseite der Klinik
+                {{ partial:icons/arrow-right class="ml-7 mt-2 text-graphite" }}
+              </a>
+            </div>
+          {{ /if }}
+        </div>
+      {{ /locations}}
+    </div>
+  </div>
+</section>

@@ -23,6 +23,7 @@ module.exports = {
         'azure': '#99d0e0',
         'graphite': '#706f6f',
         'snow': '#f7f7f7',
+        'silver': '#eaeaea',
       },
 
       fontFamily: {
@@ -32,9 +33,11 @@ module.exports = {
       },
 
       fontSize: {
-        '4xl': '6rem', // 96px
-        '3xl': '4rem', // 64px
+        '5xl': '6rem', // 96px
+        '4xl': '4rem', // 64px
+        '3xl': '3rem', // 48px
         '2xl': '2.25rem', // 36px
+        'xxl': '2rem', // 32px
         'xl': '1.5rem', // 24px,
         'lg': '1.25rem', // 20px
         'md': '1.1875rem', // 19px

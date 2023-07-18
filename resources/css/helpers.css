@@ -29,3 +29,11 @@ section p {
 section p:last-of-type {
   @apply mb-0;
 }
+
+section ul {
+  @apply mb-15 ml-20 xl:mb-25;
+}
+
+section ul li {
+  @apply list-item list-disc
+}

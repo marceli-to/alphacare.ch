@@ -1,0 +1,51 @@
+title: Location
+fields:
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Title
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      validate:
+        - required
+  -
+    handle: address
+    field:
+      antlers: false
+      type: textarea
+      display: Address
+      icon: textarea
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: phone
+    field:
+      input_type: tel
+      antlers: false
+      type: text
+      display: Phone
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: website
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Website
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

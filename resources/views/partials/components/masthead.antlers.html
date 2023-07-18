@@ -3,9 +3,14 @@
     {{ partial:components/picture :image="image" sizes="(min-width: 1024px) 1024px, (min-width: 1280px) 1600px, 90vw" }}
     <div class="absolute w-full h-full bg-black opacity-[.15]"></div>
     <div class="absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 w-full z-20">
-      <h1 class="text-2xl sm:text-3xl md:text-4xl text-white text-center leading-tight">
+      <h1 class="text-2xl sm:text-4xl md:text-5xl text-white text-center leading-none xl:px-36">
         {{ title }}
       </h1>
+      {{ if byline }}
+        <div>
+          {{ byline }}
+        </div>
+      {{ /if }}
       {{ if link }}
         <div class="mt-36 xl:mt-48 flex justify-center">
           {{ partial:components/link }}
@@ -15,10 +20,15 @@
   </div>
 {{ else }}
   <div class="theme-{{ background_color }} flex aspect-square sm:aspect-4/1 sm:min-h-[400px] md:min-h-[440px] max-h-[330px] sm:max-h-none xl:max-h-[465px] w-full relative">
-    <div class="container flex justify-center items-center">
-      <h1 class="text-2xl sm:text-3xl md:text-4xl text-white text-center leading-none">
+    <div class="container flex flex-col justify-center items-center">
+      <h1 class="text-2xl sm:text-4xl md:text-5xl text-white text-center leading-none">
         {{ title }}
       </h1>
+      {{ if byline }}
+        <div class="font-semibold text-white text-md md:text-xxl xl:text-2xl mt-24 xl:mt-36">
+          {{ byline }}
+        </div>
+      {{ /if }}
     </div>
   </div>
 {{ /if }}

@@ -43,7 +43,11 @@
 {{ /if }}
 
 {{ if type == 'team_members' }}
-  {{ partial:components/team_members }}
+  {{ partial:components/team/list }}
+{{ /if }}
+
+{{ if type == 'locations' }}
+  {{ partial:components/locations }}
 {{ /if }}
 
 

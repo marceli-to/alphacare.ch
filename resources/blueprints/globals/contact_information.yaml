@@ -32,3 +32,14 @@ tabs:
               hide_display: false
               validate:
                 - required
+          -
+            handle: address
+            field:
+              antlers: false
+              type: textarea
+              display: Address
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false

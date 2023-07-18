@@ -1,5 +1,71 @@
 <section class="py-72 xl:py-108">
   <div class="container">
-    {{ firstname }} {{ name }}
+
+    <div class="md:grid md:grid-cols-12 md:gap-36 lg:gap-56">
+      <figure class="md:col-span-5 lg:col-span-4 mb-36">
+        {{ if image }}
+          {{ partial:components/image :image="image" :width="'600'" :height="'900'" :caption="image:alt" class="aspect-2/3 w-full h-auto" }}
+        {{ /if }}
+      </figure>
+      <div class="md:col-span-7 lg:col-span-8">
+
+        {{ if job_title }}
+          <h2 class="text-xl lg:text-2xl text-azure uppercase tracking-widest mb-12 lg:mb-36">
+            {{ job_title }}
+          </h2>
+        {{ /if }}
+
+        <h1 class="text-xxl lg:text-3xl">
+          {{ firstname }} {{ name }}
+        </h1>
+
+        {{ if function }}
+          <div class="mt-32 lg:mt-48 text-md leading-8">
+            {{ function | nl2br }}
+          </div>
+        {{ /if }}
+
+        {{ if email || phone || experience }}
+          <div class="lg:grid lg:grid-cols-12 lg:gap-36 xl:gap-56 xl:gap-y-36 pt-24 lg:pt-36 mt-24 lg:mt-36 border-t border-t-silver md:text-md">
+            {{ if email || phone }}
+              <div class="md:col-span-4 font-semibold mb-12 lg:mb-0">
+                Kontakt
+              </div>
+              <div class="md:col-span-8 leading-8">
+                {{ if email }}
+                  <div>
+                    <a 
+                      href="mailto:{{ email }}" 
+                      title="{{ firstname }} {{ name }} per E-Mail kontaktieren"
+                      class="hover:underline hover:text-azure decoration-1 underline-offset-4 transition-all">
+                      {{ email }}
+                    </a>
+                  </div>
+                {{ /if }}
+                {{ if phone }}
+                  <div>
+                    <a 
+                      href="tel:{{ phone }}" 
+                      title="{{ firstname }} {{ name }} per Telefon kontaktieren"
+                      class="hover:underline hover:text-azure decoration-1 underline-offset-4 transition-all">
+                      {{ phone }}
+                    </a>
+                  </div>
+                {{/if}}
+              </div>
+            {{ /if }}
+            {{ if experience }}
+              <div class="lg:col-span-4 font-semibold mt-36 lg:mt-0 mb-12 lg:mb-24">
+                Berufserfahrung
+              </div>
+              <div class="lg:col-span-8">
+                {{ experience }}
+              </div>
+            {{ /if }}
+          </div>
+        {{ /if }}
+
+      </div>
+    </div>
   </div>
 </section>

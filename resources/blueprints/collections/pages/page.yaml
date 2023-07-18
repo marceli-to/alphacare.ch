@@ -107,6 +107,13 @@ tabs:
                       fields:
                         -
                           import: team_member
+                    locations:
+                      display: Locations
+                      instructions: null
+                      icon: form-address-field
+                      fields:
+                        -
+                          import: locations
               type: replicator
               display: Elements
               icon: replicator

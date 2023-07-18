@@ -1,0 +1,53 @@
+title: Locations
+fields:
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Title
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      validate:
+        - required
+  -
+    handle: text
+    field:
+      antlers: false
+      type: textarea
+      display: Text
+      icon: textarea
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: locations
+    field:
+      collapse: false
+      previews: true
+      fullscreen: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          instructions: null
+          icon: null
+          sets:
+            location:
+              display: Location
+              instructions: null
+              icon: form-address-field
+              fields:
+                -
+                  import: location
+      type: replicator
+      display: Locations
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

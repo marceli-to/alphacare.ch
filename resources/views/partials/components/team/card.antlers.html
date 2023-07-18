@@ -1,0 +1,31 @@
+<figure class="sm:col-span-4 lg:col-span-3 mb-36 sm:mb-0 relative group">
+  {{ if experience }}
+  
+    <a href="/ueber-uns/team/{{ slug }}" title="{{ firstname }} {{ name }}">
+      {{ partial:icons/magnifying-glass class="w-32 h-32 block text-graphite opacity-0 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 group-hover:opacity-80" }}
+
+      {{ if image }}
+        {{ partial:components/image :image="image" :width="'600'" :height="'900'" :caption="image:alt" class="aspect-2/3 grayscale group-hover:grayscale-0 transition-all" }}
+      {{ /if }}
+      <figcaption class="absolute left-0 top-0 w-full h-full text-white bg-black bg-opacity-20 flex items-end">
+        <div class="p-18 xl:p-27">
+          <div class="text-md leading-6 mb-9">{{ firstname }} {{ name }}</div>
+          <div class="text-tiny leading-5">{{ function }}</div>
+        </div>
+      </figcaption>
+    </a>
+
+  {{ else }}
+
+    {{ if image }}
+      {{ partial:components/image :image="image" :width="'600'" :height="'900'" :caption="image:alt" class="aspect-2/3 grayscale group-hover:grayscale-0 transition-all" }}
+    {{ /if }}
+    <figcaption class="absolute left-0 top-0 w-full h-full text-white bg-black bg-opacity-20 flex items-end">
+      <div class="p-18 xl:p-27">
+        <div class="text-md leading-6 mb-9">{{ firstname }} {{ name }}</div>
+        <div class="text-tiny leading-5">{{ function }}</div>
+      </div>
+    </figcaption>
+
+  {{ /if }}
+</figure>
