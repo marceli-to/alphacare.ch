@@ -1,28 +1,66 @@
 <section class="{{ if background_color }} theme-{{ background_color }} {{ /if }} py-72 xl:py-108">
   <div class="container">
-    <article>
-      {{ text }}
-        <div class="text-md leading-8">
-          {{ text }}
-        </div>
+    <div class="{{ if two_column }} md:grid md:grid-cols-12 md:gap-54 {{ /if }}">
+      <article class="{{ if two_column }} mb-36 md:mb-0 md:col-span-6 {{ /if }}">
+        {{ text }}
 
-        {{ if type == 'collapsibles' }}
-          <div class="mt-36 xl:mt-72">
-            {{ if title }}
-              <h3 class="text-lg leading-8 mb-32">{{ title }}</h3>
+          {{ if type == 'text' }}
+            <div class="text-content text-md leading-7">
+              {{ text }}
+            </div>
+          {{ /if }}
+
+          {{ if type == 'collapsibles' }}
+            <div class="mt-36 xl:mt-72">
+              {{ if title }}
+                <h3 class="text-lg leading-8 mb-32">{{ title }}</h3>
+              {{ /if }}
+              {{ collapsible }}
+                {{ partial:components/collapsible }}
+              {{ /collapsible }}
+            </div>
+          {{ /if }}
+
+          {{ if type == 'text_image' }}
+            {{ partial:components/text_image }}
+          {{ /if }}
+
+          {{ if type == 'anchor' }}
+            {{ partial:components/anchor }}
+          {{ /if }}
+
+        {{ /text }}
+
+      </article>
+
+      <article class="{{ if two_column }} md:col-span-6 {{ /if }}">
+        {{ if two_column }}
+          {{ text_right }}
+
+            {{ if type == 'text' }}
+              <div class="text-content text-md leading-7">
+                {{ text }}
+              </div>
             {{ /if }}
-            {{ collapsible }}
-              {{ partial:components/collapsible }}
-            {{ /collapsible }}
-          </div>
+
+            {{ if type == 'collapsibles' }}
+              <div class="mt-36 xl:mt-72">
+                {{ if title }}
+                  <h3 class="text-lg leading-8 mb-32">{{ title }}</h3>
+                {{ /if }}
+                {{ collapsible }}
+                  {{ partial:components/collapsible }}
+                {{ /collapsible }}
+              </div>
+          {{ /if }}
+
+            {{ if type == 'text_image' }}
+              {{ partial:components/text_image }}
+            {{ /if }}
+
+          {{ /text_right }}
         {{ /if }}
-
-        {{ if type == 'text_image' }}
-          {{ partial:components/text_image }}
-        {{ /if }}
-
-      {{ /text }}
-
-    </article>
+      </article>
+    </div>
   </div>
 </section>

@@ -25,8 +25,8 @@ fields:
       link_noreferrer: false
       target_blank: false
       sets:
-        collapsibles:
-          display: Collapsibles
+        standard_items:
+          display: 'Standard items'
           instructions: null
           icon: form-drop-down-menu
           sets:
@@ -44,6 +44,18 @@ fields:
               fields:
                 -
                   import: text_image
+        special_items:
+          display: 'Special items'
+          instructions: null
+          icon: shopping-jewelry-diamond-gem
+          sets:
+            anchor:
+              display: Anchor
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: anchor_target
       always_show_set_button: false
       collapse: false
       previews: true
@@ -54,5 +66,72 @@ fields:
       instructions_position: above
       visibility: visible
       hide_display: false
+  -
+    handle: two_column
+    field:
+      default: false
+      type: toggle
+      display: 'Two columns?'
+      icon: toggle
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: text_right
+    field:
+      buttons:
+        - h2
+        - h3
+        - bold
+        - unorderedlist
+        - removeformat
+        - anchor
+      smart_typography: false
+      save_html: false
+      inline: false
+      toolbar_mode: fixed
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      enable_input_rules: true
+      enable_paste_rules: true
+      remove_empty_nodes: true
+      antlers: false
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      always_show_set_button: false
+      collapse: false
+      previews: true
+      type: bard
+      display: 'Text right'
+      icon: bard
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      sets:
+        standard_items:
+          display: 'Standard items'
+          instructions: null
+          icon: null
+          sets:
+            collapsibles:
+              display: Collapsibles
+              instructions: null
+              icon: form-drop-down-menu
+              fields:
+                -
+                  import: collapsibles
+            text_image:
+              display: 'Text, Image'
+              instructions: null
+              icon: text-formatting-image-left
+              fields:
+                -
+                  import: text_image
+      if:
+        two_column: 'equals true'
   -
     import: background_color
