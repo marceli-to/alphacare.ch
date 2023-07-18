@@ -31,7 +31,6 @@
     menuChildItemLinks.forEach((item) => {
       item.addEventListener('click', hideMenu);
     });
-
   };
 
   // Toggle menu
@@ -73,6 +72,12 @@
       else {
         ul.classList.add(classes.hidden);
         item.classList.remove(classes.active);
+        
+        const href = item.getAttribute('href');
+        if (href) {
+          document.location.href = href;
+          return;
+        }    
       }
     }
   };
