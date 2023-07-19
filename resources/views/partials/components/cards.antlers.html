@@ -13,7 +13,7 @@
           {{ if image }}
             {{ partial:components/image :image="image" :width="'1200'" :height="'900'" :caption="image:alt" class="aspect-4/3 mb-32" }}
           {{ /if }}
-          {{ if card_icon != 'null' }}
+          {{ if card_icon != 'null' && card_icon != null }}
             {{ partial:icons/{{card_icon}} class="w-48 h-48 xl:w-84 xl:h-84 block text-azure mb-18 xl:mb-32" }}
           {{ /if }}
           {{ if title }}  
