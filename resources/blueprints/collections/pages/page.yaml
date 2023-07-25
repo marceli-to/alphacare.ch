@@ -121,6 +121,23 @@ tabs:
               instructions_position: above
               visibility: visible
               hide_display: false
+  seo:
+    display: SEO
+    sections:
+      -
+        display: SEO
+        fields:
+          -
+            handle: description
+            field:
+              antlers: false
+              type: textarea
+              display: Description
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
   sidebar:
     display: Sidebar
     sections:
