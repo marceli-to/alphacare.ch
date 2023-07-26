@@ -63,6 +63,11 @@ fields:
       instructions_position: above
       visibility: visible
       hide_display: false
+      link_collections:
+        - pages
+      always_show_set_button: false
+      collapse: false
+      previews: true
   -
     import: link
   -

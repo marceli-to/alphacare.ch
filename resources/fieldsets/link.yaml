@@ -11,6 +11,8 @@ fields:
       visibility: visible
       hide_display: false
       container: assets
+      collections:
+        - pages
   -
     handle: link_text
     field:

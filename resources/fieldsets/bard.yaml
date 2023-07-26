@@ -66,6 +66,8 @@ fields:
       instructions_position: above
       visibility: visible
       hide_display: false
+      link_collections:
+        - pages
   -
     handle: two_column
     field:
@@ -133,5 +135,7 @@ fields:
                   import: text_image
       if:
         two_column: 'equals true'
+      link_collections:
+        - pages
   -
     import: background_color

@@ -156,8 +156,6 @@ tabs:
               hide_display: false
               display: Title
               instructions: 'Generated automatically'
-              validate:
-                - required
           -
             handle: slug
             field:
@@ -171,8 +169,7 @@ tabs:
               generate: true
               show_regenerate: false
               hide_display: false
-              validate:
-                - required
+              display: Slug
           -
             handle: parent
             field:

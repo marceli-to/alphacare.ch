@@ -1,5 +1,5 @@
 <picture class="block w-full">
-  <source
+  {{# <source
     srcset="
         {{ glide:image preset='sm-avif' }} 320w,
         {{ glide:image preset='md-avif' }} 480w,
@@ -8,7 +8,7 @@
         {{ glide:image preset='2xl-avif' }} 1440w"
     sizes="{{ sizes }}"
     type="image/avif"
-  >
+  > #}}
   <source
     srcset="
         {{ glide:image preset='sm-webp' }} 320w,
