@@ -68,6 +68,7 @@ fields:
       hide_display: false
       link_collections:
         - pages
+      container: assets
   -
     handle: two_column
     field:
