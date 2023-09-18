@@ -44,5 +44,6 @@ fields:
       instructions_position: above
       visibility: visible
       hide_display: false
+      container: assets
   -
     import: background_color
