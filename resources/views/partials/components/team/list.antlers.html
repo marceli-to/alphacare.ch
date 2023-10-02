@@ -7,14 +7,15 @@
       {{ text }}
     </div>
     <div class="mb-18 sm:mb-24">
-      <select data-categories>
+      <select data-categories class="bg-transparent !ring-0 border !border-graphite ">
+        <option value="all">Alle</option>
         {{ taxonomy:categories }}
           <option value="{{ slug }}">{{ title }}</option>
         {{ /taxonomy:categories }}
       </select>
       <a 
         href="javascript:;"
-        class="font-regular text-xxs lg:text-xs !text-graphite bg-transparent inline-flex underline hover:no-underline items-center leading-none w-auto !px-0 lg:py-12 !is-hidden"
+        class="font-regular text-xxs lg:text-xs !text-graphite bg-transparent inline-flex ml-18 underline hover:no-underline items-center leading-none w-auto !px-0 lg:py-12 !is-hidden"
         data-reset-btn>
         Filter Zurücksetzen
       </a>
