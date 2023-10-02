@@ -1,4 +1,4 @@
-<figure class="sm:col-span-4 lg:col-span-3 mb-36 sm:mb-0 relative group">
+<figure class="sm:col-span-4 lg:col-span-3 mb-36 sm:mb-0 relative group" {{ if categories }}data-category-item="{{ categories }}{{ slug }}{{if !last}},{{/if}}{{ /categories}}"{{else}}data-category-item{{/if}}>
   {{ if experience }}
   
     <a href="/ueber-uns/team/{{ slug }}" title="{{ firstname }} {{ name }}">

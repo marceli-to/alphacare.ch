@@ -6,6 +6,23 @@
     <div class="mb-36 xl:mb-56">
       {{ text }}
     </div>
+    <div class="sm:flex sm:gap-x-18 mb-18">
+      {{ taxonomy:categories }}
+        <a 
+          href="javascript:;" 
+          class="font-semibold text-xxs lg:text-xs mr-12 mb-12 sm:mr-0 sm:mb-0 !text-white bg-graphite hover:bg-azure transition-all inline-flex !no-underline items-center leading-none w-auto px-24 py-8 lg:py-12 lg:px-32" 
+          data-category-btn="{{ slug }}">
+          {{ title }}
+        </a>
+      {{ /taxonomy:categories }}
+      <a 
+        href="javascript:;"
+        class="font-regular text-xxs lg:text-xs !text-graphite bg-transparent inline-flex underline hover:no-underline items-center leading-none w-auto !px-0 lg:py-12 !is-hidden"
+        data-reset-btn>
+        Zurücksetzen
+      </a>
+    </div>
+
     <div class="sm:grid sm:grid-cols-12 sm:gap-18">
       {{ collection:team sort="name" }}
         {{ partial:components/team/card }}

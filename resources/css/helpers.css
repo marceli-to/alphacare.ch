@@ -2,8 +2,20 @@
   @apply hidden;
 }
 
+.\!is-hidden {
+  @apply !hidden;
+}
+
 .is-block {
   @apply block
+}
+
+.\!is-block {
+  @apply !block;
+}
+
+.is-btn-active {
+  @apply bg-azure;
 }
 
 .bg-blue {
