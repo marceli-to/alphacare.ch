@@ -50,3 +50,4 @@ editor:
     - 'edit roles'
     - 'access cache utility'
     - 'access search utility'
+    - 'access default site'
